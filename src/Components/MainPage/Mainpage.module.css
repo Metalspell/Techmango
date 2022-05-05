@@ -9,7 +9,6 @@
 }
 
 .mainWrapper {
-  margin: 0 auto;
   position: relative;
   width: 90%;
   display: grid;
@@ -79,10 +78,13 @@
   background-image: linear-gradient(#F39200 0%, #E4032E 100%);
   width: 20vw;
   height: 4vw;
-  -webkit-box-shadow: 1px 10px 50px -1px #e5032e;
-  box-shadow: 1px 10px 50px -1px #e5032e !important;
   border-radius: 0.8vw !important;
   cursor: pointer;
+}
+
+.button:hover {
+  -webkit-box-shadow: 1px 10px 50px -1px #e5032e;
+  box-shadow: 1px 10px 50px -1px #e5032e !important;
 }
 
 .button h3 {

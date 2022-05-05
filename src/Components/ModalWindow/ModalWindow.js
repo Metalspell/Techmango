@@ -8,7 +8,6 @@ import * as yup from 'yup';
 import { useFormik } from 'formik';
 import SubmitButton from './SubmitButton/SubmitButton';
 import SocialItems from '../SocialItems/SocialItems';
-import emailjs from 'emailjs-com';
 
 const API_URL = 'https://api.qa.zgambling.com/public/password_recovery';
 
@@ -22,7 +21,9 @@ const validationSchema = yup.object().shape({
 const ModalWindow = ({ setIsOpen }) => {
   const [request, setrequest] = useState(null);
   const [isActiveError, setActiveError] = useState(false);
-  const { mutateAsync, isLoading } = useMutation((data) => axios.post(API_URL, JSON.stringify(data)));
+  const [errorTips, setErrorTips] = useState('');
+
+  const { mutateAsync } = useMutation((data) => axios.post(API_URL, JSON.stringify(data)));
   const handleSubmit = async (values, { resetForm }) => {
     await mutateAsync(values, {
       onSuccess: () => {
@@ -46,13 +47,28 @@ const ModalWindow = ({ setIsOpen }) => {
   });
 
   useEffect(() => {
+    console.log(formik.errors.email)
     if (formik.errors.email !== '') {
       setActiveError(true);
     }
+    if (formik.errors.email === 'Required field') {
+      setErrorTips(formik.errors.email);
+    } else {
+      setErrorTips('');
+    }
     if (formik.errors.email === undefined) {
       setActiveError(false);
+      setErrorTips('');
     }
   }, [formik.errors.email, isActiveError]);
+
+  function inputTyping(e) {
+    if (e.target.value !== '' && formik.errors.email !== '') {
+      setErrorTips(formik.errors.email);
+    } else {
+      setErrorTips('');
+    }
+  }
 
   return (
     <>
@@ -61,7 +77,7 @@ const ModalWindow = ({ setIsOpen }) => {
         <img className="modal-close-icon"
           onClick={() => setIsOpen(false)}
           src={require('./icons/Group110.png')}
-          alt=""
+          alt="close-icon"
         />
         {request === null ? (
           <form onSubmit={formik.handleSubmit} className='email-form'>
@@ -78,9 +94,11 @@ const ModalWindow = ({ setIsOpen }) => {
               onChange={formik.handleChange}
               value={formik.values.email}
               className={isActiveError ? 'error-active' : 'form-field'}
+              onBlur={inputTyping}
             />
-            <h3 className='error-notify'>{formik.errors.email}</h3>
-            <SubmitButton isActiveError={isActiveError}
+            <h3 className='error-notify'>{errorTips}</h3>
+            <SubmitButton 
+              isActiveError={isActiveError}
               onClick={() => setIsOpen(true)}
             ></SubmitButton>
           </form>
