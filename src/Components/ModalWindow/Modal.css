@@ -1,0 +1,230 @@
+@font-face {
+  font-family: 'Briem Script STD';
+  src: url('../../Fonts/Briem/BriemScriptStd-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../Fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+.overlay-base {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(30px);
+}
+
+.overlay-after {
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 1;
+}
+
+.overlay-before {
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+}
+
+.content-base {
+  position: relative;
+  margin: 0 auto;
+  border: 0;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 0%;
+  background-color: transparent;
+  transition-property: background-color, width, height;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in-out;
+}
+
+.content-after {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+}
+
+.content-before {
+  width: 0%;
+  height: 0%;
+  background-color: transparent;
+}
+
+.modal-body {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+}
+
+.modal-close-icon {
+  width: 2vw;
+  height: 2vw;
+  grid-column-start: 11;
+  grid-column-end: 11;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column-start: 4;
+  grid-column-end: 10;
+  grid-row-start: 5;
+  grid-row-end: 7;
+}
+
+.error-notify {
+  text-transform: uppercase;
+  font-family: 'Inter';
+  font-weight: 400;
+  color: rgba(255, 92, 92, 0.75);
+  margin: 0vw 0vw 2vw 0vw;
+  font-size: 1vw;
+}
+
+.congratulation-header {
+  grid-column-start: 4;
+  grid-column-end: 10;
+  grid-row-start: 5;
+  grid-row-end: 7;
+  color: rgba(234, 203, 124, 1);
+  font-family: 'Briem Script STD';
+  font-weight: 700;
+  font-size: 2vw;
+  line-height: 3vw;
+  text-align: center;
+}
+
+.email-form label p {
+  font-family: 'Briem Script STD';
+  font-weight: 700;
+  font-size: 2vw;
+  line-height: 3vw;
+  color: rgba(255, 255, 255, 1);
+  margin: 0;
+  text-align: center;
+}
+
+.form-field,
+.error-active {
+  margin: 4vw 0vw 2vw 0vw;
+  font-family: inherit;
+  width: 60%;
+  border: 0;
+  outline: 0;
+  font-size: 1.5rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  text-align: center;
+}
+
+.form-field {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.error-active {
+  border-bottom: 2px dashed rgba(255, 92, 92, 0.75);
+}
+
+.form-field::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+.form-field:placeholder-shown~.form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form-field:focus {
+  background: transparent;
+}
+
+input:focus {
+  outline: 0;
+}
+
+
+@media (max-width: 1024px) {
+  .email-form {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 5;
+    grid-row-end: 9;
+  }
+
+  .email-form label p {
+    font-size: 3.5vw;
+    line-height: 5vw;
+  }
+
+  .form-field {
+    width: 70%;
+  }
+
+  .congratulation-header {
+    grid-column-start: 2;
+    grid-column-end: 12;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    font-size: 4vw;
+  }
+
+  .error-notify {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-wrapper {
+    background-position: -2% 40%;
+    background-size: 210vw;
+  }
+
+  .email-form label p {
+    font-size: 3.9vw;
+    line-height: 6vw;
+  }
+
+  .error-notify {
+    font-size: 3vw;
+    margin: 5vw 0vw 5vw 0vw;
+  }
+
+  .form-field,
+  .error-active {
+    width: 100%;
+  }
+
+  .modal-close-icon {
+    width: 4vw;
+    height: 4vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-wrapper {
+    background-position: -6% 40%;
+    background-size: 170vw;
+  }
+
+  .error-notify {
+    font-size: 2.5vw;
+  }
+}
