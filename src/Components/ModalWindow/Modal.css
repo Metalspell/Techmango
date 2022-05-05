@@ -66,6 +66,7 @@
 }
 
 .modal-close-icon {
+  margin: 0 auto;
   width: 2vw;
   height: 2vw;
   grid-column-start: 11;
