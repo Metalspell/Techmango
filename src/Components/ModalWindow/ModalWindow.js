@@ -12,7 +12,6 @@ import emailjs from 'emailjs-com';
 
 const API_URL = 'https://api.qa.zgambling.com/public/password_recovery';
 
-
 const validationSchema = yup.object().shape({
   email: yup
     .string()
