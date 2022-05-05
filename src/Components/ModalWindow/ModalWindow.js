@@ -90,7 +90,7 @@ const ModalWindow = ({ setIsOpen }) => {
               placeholder='mail@mail.com'
               autoComplete="off"
               autoFocus
-              spellcheck="false"
+              spellCheck="false"
               onChange={formik.handleChange}
               value={formik.values.email}
               className={isActiveError ? 'error-active' : 'form-field'}

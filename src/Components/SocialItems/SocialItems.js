@@ -16,13 +16,13 @@ const SocialItems = () => {
           Address
         </h4>
         <p className={classes.socialLinkItem}>
-          zolotovototskaia 6b
+          Unit 33301 Second Floor
         </p>
         <p className={classes.socialLinkItem}>
-          01030 kiev
+          6 Market Place, London, Fitzrovia
         </p>
         <p className={classes.socialLinkItem}>
-          Ukraine
+          United Kingdom, W1W 8AF
         </p>
       </article>
       <article className={classes.ourEmail}>
