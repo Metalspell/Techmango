@@ -21,12 +21,13 @@ const ModalWindow = ({ setIsOpen }) => {
   const [isActiveError, setActiveError] = useState(false);
   const [errorTips, setErrorTips] = useState('');
 
-  const {REACT_APP_SERVICE_KEY, REACT_APP_TEMPLATE_KEY, REACT_APP_PRIVATE_KEY} = process.env;
+  const { REACT_APP_SERVICE_KEY, REACT_APP_TEMPLATE_KEY, REACT_APP_PRIVATE_KEY } = process.env;
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm(`${process.env.REACT_APP_SERVICE_KEY}`,
+    emailjs.sendForm(
+      `${REACT_APP_SERVICE_KEY}`,
       `${REACT_APP_TEMPLATE_KEY}`,
       form.current,
       `${REACT_APP_PRIVATE_KEY}`)
