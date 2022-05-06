@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Techmango/static/css/main.d5c857ab.css",
+    "main.css": "/Techmango/static/css/main.c9c6b8d8.css",
     "main.js": "/Techmango/static/js/main.431a7e6c.js",
     "static/media/Group 117_cut.png": "/Techmango/static/media/Group 117_cut.71b139d2285de1227e4e.png",
     "static/media/Inter-VariableFont_slnt,wght.ttf": "/Techmango/static/media/Inter-VariableFont_slnt,wght.b4c30855aff392d7e8dc.ttf",
     "static/media/BriemScriptStd-Bold.otf": "/Techmango/static/media/BriemScriptStd-Bold.9a6a5ed26962c3da506d.otf",
     "static/media/Group.png": "/Techmango/static/media/Group.00183cea6269137d68f2.png",
     "index.html": "/Techmango/index.html",
-    "main.d5c857ab.css.map": "/Techmango/static/css/main.d5c857ab.css.map",
+    "main.c9c6b8d8.css.map": "/Techmango/static/css/main.c9c6b8d8.css.map",
     "main.431a7e6c.js.map": "/Techmango/static/js/main.431a7e6c.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5c857ab.css",
+    "static/css/main.c9c6b8d8.css",
     "static/js/main.431a7e6c.js"
   ]
 }
