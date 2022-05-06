@@ -46,7 +46,6 @@ const ModalWindow = ({ setIsOpen }) => {
   });
 
   useEffect(() => {
-    console.log(`${REACT_APP_SERVICE_KEY}`)
     if (formik.errors.email !== '') {
       setActiveError(true);
     }

@@ -111,6 +111,13 @@
   }
 }
 
+@media screen and (max-height: 480px) {
+  .mainWrapper {
+    display: none;
+  }
+}
+
+
 @media (max-width: 480px) {
   .mainWrapper {
     flex-wrap: wrap;
