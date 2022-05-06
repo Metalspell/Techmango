@@ -1,15 +1,12 @@
 import './Modal.css';
 import { useEffect } from 'react';
 import Logo from '../Logo/Logo';
-import { useState } from "react";
-import axios from 'axios';
-import { useMutation } from 'react-query';
+import { useState, useRef } from "react";
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 import SubmitButton from './SubmitButton/SubmitButton';
 import SocialItems from '../SocialItems/SocialItems';
-
-const API_URL = 'https://api.qa.zgambling.com/public/password_recovery';
+import emailjs from 'emailjs-com';
 
 const validationSchema = yup.object().shape({
   email: yup
@@ -19,22 +16,25 @@ const validationSchema = yup.object().shape({
 });
 
 const ModalWindow = ({ setIsOpen }) => {
+  const form = useRef();
   const [request, setrequest] = useState(null);
   const [isActiveError, setActiveError] = useState(false);
   const [errorTips, setErrorTips] = useState('');
 
-  const { mutateAsync } = useMutation((data) => axios.post(API_URL, JSON.stringify(data)));
-  const handleSubmit = async (values, { resetForm }) => {
-    await mutateAsync(values, {
-      onSuccess: () => {
+  const {REACT_APP_SERVICE_KEY, REACT_APP_TEMPLATE_KEY, REACT_APP_PRIVATE_KEY} = process.env;
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(`${process.env.REACT_APP_SERVICE_KEY}`,
+      `${REACT_APP_TEMPLATE_KEY}`,
+      form.current,
+      `${REACT_APP_PRIVATE_KEY}`)
+      .then((result) => {
         setrequest(true);
-        resetForm();
-      },
-      onError: () => {
+      }, (error) => {
         setrequest(false);
-        resetForm();
-      },
-    });
+      });
   };
 
   const formik = useFormik({
@@ -43,11 +43,10 @@ const ModalWindow = ({ setIsOpen }) => {
     initialValues: {
       email: '',
     },
-    onSubmit: handleSubmit,
   });
 
   useEffect(() => {
-    console.log(formik.errors.email)
+    console.log(`${REACT_APP_SERVICE_KEY}`)
     if (formik.errors.email !== '') {
       setActiveError(true);
     }
@@ -80,7 +79,7 @@ const ModalWindow = ({ setIsOpen }) => {
           alt="close-icon"
         />
         {request === null ? (
-          <form onSubmit={formik.handleSubmit} className='email-form'>
+          <form ref={form} onSubmit={sendEmail} className='email-form'>
             <label htmlFor="email"><p>Tell us your email address</p>
               <p>and we will contact you as soon as possible</p></label>
             <input
@@ -97,7 +96,7 @@ const ModalWindow = ({ setIsOpen }) => {
               onBlur={inputTyping}
             />
             <h3 className='error-notify'>{errorTips}</h3>
-            <SubmitButton 
+            <SubmitButton
               isActiveError={isActiveError}
               onClick={() => setIsOpen(true)}
             ></SubmitButton>
