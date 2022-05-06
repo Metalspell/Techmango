@@ -92,7 +92,7 @@
 @keyframes emailFormAnimation {
   0% {
     visibility: visible;
-    transform: translateX(-150%);
+    transform: translateX(-15%);
   }
 
   15% {
