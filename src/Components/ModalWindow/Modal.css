@@ -83,7 +83,7 @@
   grid-column-end: 10;
   grid-row-start: 5;
   grid-row-end: 7;
-  visibility: hidden;
+  opacity: 0;
 
   animation: emailFormAnimation 0.5s ease-in-out forwards;
   animation-delay: 0.5s;
@@ -91,43 +91,35 @@
 
 @keyframes emailFormAnimation {
   0% {
-    visibility: visible;
-    transform: translateX(-15%);
+    opacity: 0;
   }
 
   15% {
-    visibility: visible;
-    transform: translateX(10%);
+    opacity: 0.1;
   }
 
   30% {
-    visibility: visible;
-    transform: translateX(-10%);
+    opacity: 0.3;
   }
 
   45% {
-    visibility: visible;
-    transform: translateX(5%);
+    opacity: 0.5;
   }
 
   60% {
-    visibility: visible;
-    transform: translateX(-5%);
+    opacity: 0.7;
   }
 
   75% {
-    visibility: visible;
-    transform: translateX(3%);
+    opacity: 0.8;
   }
 
   85% {
-    visibility: visible;
-    transform: translateX(-3%);
+    opacity: 0.9;
   }
 
   100% {
-    visibility: visible;
-    transform: translateX(0);
+    opacity: 1;
   }
 }
 

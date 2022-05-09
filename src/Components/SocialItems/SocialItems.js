@@ -50,9 +50,9 @@ const SocialItems = () => {
         <h4 className={classes.itemsTitle}>
           Say hello!
         </h4>
-        <p className={classes.socialLinkItem}>
+        <a href="hello@techmango.com" className={classes.socialLinkItem}>
           hello@techmango.com
-        </p>
+        </a>
       </article>
     </section>
   );
