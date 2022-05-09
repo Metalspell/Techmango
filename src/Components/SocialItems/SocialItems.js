@@ -50,7 +50,7 @@ const SocialItems = () => {
         <h4 className={classes.itemsTitle}>
           Say hello!
         </h4>
-        <a href="mailto:demo@demo.com?Subject=upport" className={classes.socialLinkItem}>
+        <a href="mailto:hello@techmango.com?Subject=upport" className={classes.socialLinkItem}>
           hello@techmango.com
         </a>
       </article>
