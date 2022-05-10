@@ -47,32 +47,35 @@ const ModalWindow = ({ setIsOpen }) => {
   });
 
   useEffect(() => {
-    console.log(errorTips)
     if (formik.errors.email !== '') {
       setActiveError(true);
     }
     if (formik.errors.email === 'Required field') {
       setErrorTips(formik.errors.email);
-    } else {
+    } else if (formik.errors.email !== '' && formik.errors.email !== 'Required field') {
       setErrorTips('');
     }
     if (formik.errors.email === undefined) {
       setActiveError(false);
       setErrorTips('');
     }
-  }, [formik.errors.email, isActiveError, errorTips]);
+  }, [formik.errors.email, isActiveError]);
 
   function inputTyping(e) {
     if (e.target.value !== '' && formik.errors.email !== '') {
       setErrorTips(formik.errors.email);
-    } else {
+    } else if (formik.errors.email !== 'Required field') {
       setErrorTips('');
     }
   }
 
+  function foo(e) {
+    console.log(formik.errors.email)
+  }
+
   return (
     <>
-      <section className="modal-body">
+      <section className="modal-body" onClick={foo}>
         <Logo />
         <img className="modal-close-icon"
           onClick={() => setIsOpen(false)}
