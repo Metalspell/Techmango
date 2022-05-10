@@ -47,6 +47,7 @@ const ModalWindow = ({ setIsOpen }) => {
   });
 
   useEffect(() => {
+    console.log(errorTips)
     if (formik.errors.email !== '') {
       setActiveError(true);
     }
@@ -59,7 +60,7 @@ const ModalWindow = ({ setIsOpen }) => {
       setActiveError(false);
       setErrorTips('');
     }
-  }, [formik.errors.email, isActiveError]);
+  }, [formik.errors.email, isActiveError, errorTips]);
 
   function inputTyping(e) {
     if (e.target.value !== '' && formik.errors.email !== '') {
