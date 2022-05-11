@@ -1,7 +1,7 @@
 import './App.css';
 import Mainpage from './Components/MainPage/Mainpage';
 import ModalWindow from './Components/ModalWindow/ModalWindow';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { QueryClient, QueryClientProvider } from 'react-query'
 
@@ -9,6 +9,10 @@ const queryClient = new QueryClient()
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    document.title = "TechMANGO | Home"
+  }, [])
 
   return (
     <section className='main-wrapper'>
