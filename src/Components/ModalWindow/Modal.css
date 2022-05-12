@@ -258,6 +258,11 @@ input:focus {
     font-size: 5vw !important;
     line-height: 7vw !important;
   }
+
+  .email-form {
+    grid-row-start: 6 !important;
+    grid-row-end: 10 !important;
+  }
 }
 
 @media (max-width: 480px) {
