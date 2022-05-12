@@ -68,13 +68,9 @@ const ModalWindow = ({ setIsOpen }) => {
     }
   }
 
-  function foo(e) {
-    console.log(formik.errors.email)
-  }
-
   return (
     <>
-      <section className="modal-body" onClick={foo}>
+      <section className="modal-body">
         <Logo />
         <img className="modal-close-icon"
           onClick={() => setIsOpen(false)}

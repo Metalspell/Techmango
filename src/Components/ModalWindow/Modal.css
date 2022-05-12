@@ -216,6 +216,12 @@ input:focus {
   outline: 0;
 }
 
+@media screen and (max-height: 580px) {
+  .email-form label p {
+    display: none;
+  }
+}
+
 @media (max-width: 1024px) {
   .email-form {
     grid-column-start: 2;
