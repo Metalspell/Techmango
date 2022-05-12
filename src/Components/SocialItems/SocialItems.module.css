@@ -79,6 +79,7 @@
 .mainWrapper .address .socialLinkItem {
   cursor: default;
   text-decoration: none;
+  line-height: 2vw;
 }
 
 .socialLinkItem:hover {
@@ -100,17 +101,21 @@
   }
 
   .socialLinkItem {
-    font-size: 1.4vw;
+    font-size: 1.7vw;
+  }
+
+  .mainWrapper .address .socialLinkItem {
+    line-height: 3vw;
   }
 
   .address {
     align-items: flex-start;
-    text-align: start;
+    text-align: initial;
   }
 
   .itemsTitle {
     color: rgba(255, 255, 255, 0.5);
-    font-size: 1.1vw;
+    font-size: 1.4vw;
   }
 }
 
@@ -123,15 +128,27 @@
 @media (max-width: 480px) {
   .mainWrapper {
     flex-wrap: wrap;
+    grid-row-start: 9;
+    grid-row-end: 13;
   }
 
   .mainWrapper article {
-    width: 50%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .mainWrapper article.address {
     flex-direction: column;
   }
 
+  .mainWrapper article p,
+  .mainWrapper article a {
+    padding: 2vw 3vw;
+  }
+
   .itemsTitle {
-    font-size: 3vw;
+    display: none;
   }
 
   .socialLinkItem {
@@ -141,25 +158,10 @@
   .address {
     align-items: unset;
   }
-
-  .ourEmail {
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 400px) {
-  .itemsTitle {
-    display: none;
-  }
-
-  .mainWrapper article {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .mainWrapper article p,
-  .mainWrapper article a {
-    padding: 2vw 3vw;
+  
+  .mainWrapper .address .socialLinkItem {
+    line-height: 10vw;
+    padding: 0;
+    text-align: center;
   }
 }

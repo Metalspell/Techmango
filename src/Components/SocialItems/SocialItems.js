@@ -38,11 +38,7 @@ const SocialItems = () => {
         </h4>
         <p className={classes.socialLinkItem}>
           Unit 33301 Second Floor
-        </p>
-        <p className={classes.socialLinkItem}>
           6 Market Place, London, Fitzrovia
-        </p>
-        <p className={classes.socialLinkItem}>
           United Kingdom, W1W 8AF
         </p>
       </article>
