@@ -76,12 +76,18 @@
   font-size: 1.2vw;
 }
 
+.mainWrapper .address .socialLinkItem {
+  cursor: default;
+  text-decoration: none;
+}
+
 .socialLinkItem:hover {
   text-decoration: underline;
 }
 
 .address {
   align-items: center;
+  text-align: center;
 }
 
 .ourEmail {
@@ -97,18 +103,22 @@
     font-size: 1.4vw;
   }
 
+  .address {
+    align-items: flex-start;
+    text-align: start;
+  }
+
   .itemsTitle {
     color: rgba(255, 255, 255, 0.5);
     font-size: 1.1vw;
   }
 }
 
-@media screen and (max-height: 480px) {
+@media screen and (max-height: 580px) {
   .mainWrapper {
     display: none;
   }
 }
-
 
 @media (max-width: 480px) {
   .mainWrapper {

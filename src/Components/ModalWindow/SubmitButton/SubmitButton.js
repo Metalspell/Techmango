@@ -1,5 +1,6 @@
 import classes from './SubmitButton.module.css';
 import Button from '@mui/material/Button';
+import { HiOutlineArrowRight } from '@react-icons/all-files/hi/HiOutlineArrowRight';
 
 const SubmitButton = ({ isActiveError }) => {
   return (
@@ -12,7 +13,7 @@ const SubmitButton = ({ isActiveError }) => {
       className={classes.button}
     >
       <h3 className={classes.buttonTitle}>SEND</h3>
-      <img className={classes.buttonArrow} src={require('../icons/Vector10.png')} alt="" />
+      <HiOutlineArrowRight className={!isActiveError ? classes.buttonArrow : classes.buttonArrowDisabled}/>
     </Button>
   );
 }

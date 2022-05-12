@@ -100,10 +100,11 @@
   margin: 0;
 }
 
-.button img {
-  width: 1.5vw;
-  height: 1.5vw;
+.button svg {
+  width: 2vw;
+  height: 2vw;
   margin-left: 1vw;
+  color: #ffffff;
 }
 
 .buttonWrapper h2 {
@@ -162,10 +163,9 @@
     font-size: 1.5vw;
   }
 
-  .button img {
-    width: 2vw;
-    height: 2vw;
-    margin-left: 1vw;
+  .button svg {
+    width: 2.5vw;
+    height: 2.5vw;
   }
 }
 
@@ -213,10 +213,9 @@
     font-size: 3vw;
   }
 
-  .button img {
-    width: 3vw;
+  .button svg {
+    width: 4vw;
     height: 4vw;
-    margin-left: 1vw;
   }
 
   .buttonWrapper h2 {

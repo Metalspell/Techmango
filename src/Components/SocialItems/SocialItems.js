@@ -9,11 +9,11 @@ const SocialItems = () => {
         </h4>
         <a
           className={classes.socialLinkItem}
-          href="https://t.me/techmango_hrd"
+          href="https://www.linkedin.com/company/techmangoco"
           target="_blank"
           rel="noreferrer"
         >
-          Twitter
+          LINKEDIN
         </a>
         <a
           className={classes.socialLinkItem}

@@ -1,7 +1,6 @@
 import './Modal.css';
-import { useEffect } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Logo from '../Logo/Logo';
-import { useState, useRef } from "react";
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 import SubmitButton from './SubmitButton/SubmitButton';
@@ -90,7 +89,7 @@ const ModalWindow = ({ setIsOpen }) => {
               id="email"
               name="email"
               type="email"
-              placeholder='mail@mail.com'
+              placeholder='MAIL@MAIL.COM'
               autoComplete="off"
               autoFocus
               spellCheck="false"
@@ -102,6 +101,7 @@ const ModalWindow = ({ setIsOpen }) => {
             <h3 className='error-notify'>{errorTips}</h3>
             <SubmitButton
               isActiveError={isActiveError}
+              errorTips={errorTips}
               onClick={() => setIsOpen(true)}
             ></SubmitButton>
           </form>

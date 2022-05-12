@@ -1,6 +1,7 @@
 import classes from './Mainpage.module.css';
 import Button from '@mui/material/Button';
 import Logo from '../Logo/Logo';
+import { HiOutlineArrowRight } from '@react-icons/all-files/hi/HiOutlineArrowRight';
 
 const Mainpage = ({ setIsOpen }) => {
   return (
@@ -13,7 +14,7 @@ const Mainpage = ({ setIsOpen }) => {
         <div className={classes.buttonWrapper}>
           <Button aria-label='submit' variant="contained" size='large' className={classes.button} onClick={() => setIsOpen(true)}>
             <h3>CONTACT US</h3>
-            <img src={require('./images/Vector10.png')} alt="" />
+            <HiOutlineArrowRight />
           </Button> 
           <h2>We will do the rest!</h2>
         </div>
