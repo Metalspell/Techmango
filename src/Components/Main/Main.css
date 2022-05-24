@@ -70,3 +70,13 @@ div {
   margin: 1vw 0vw 0vw 1vw;
   line-height: 3vw;
 }
+
+.swiper .swiper-pagination {
+  top: 54.5em;
+  left: 28vw !important;
+}
+
+.swiper .swiper-pagination span {
+  background-color: #ffffff;
+  margin: 0vw 1vw !important;
+}

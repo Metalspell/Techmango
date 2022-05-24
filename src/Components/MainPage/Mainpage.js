@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import Logo from '../Logo/Logo';
 import Main from '../Main/Main';
 import Agency from '../Agency/Agency';
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import { HiOutlineArrowRight } from '@react-icons/all-files/hi/HiOutlineArrowRight';
 
 const Mainpage = ({ setIsOpen, isOpen }) => {
@@ -17,22 +17,22 @@ const Mainpage = ({ setIsOpen, isOpen }) => {
       >
         <ul className={classes.navList}>
           <li>
-            <a href='/main'>Main</a>
+            <Link to='/main'>Main</Link>
           </li>
           <li>
-            <a href='/agency'>
+            <Link to='/agency'>
               Agency
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='/portfolio'>
+            <Link to='/portfolio'>
               Portfolio
-            </a>
+            </Link>
           </li>
           <li>
-            <a href='/blog'>
+            <Link to='/blog'>
               Blog
-            </a>
+            </Link>
           </li>
         </ul>
       </article>
