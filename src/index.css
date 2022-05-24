@@ -18,6 +18,6 @@ code {
 }
 
 #root {
-  background: linear-gradient(#212835 0%, #0F1219 57.94%, #212835 100%);
-  background-color: #0F1116;
+  /* background: linear-gradient(#212835 0%, #0F1219 57.94%, #212835 100%); */
+  background-color: rgba(14, 5, 20, 1);
 }

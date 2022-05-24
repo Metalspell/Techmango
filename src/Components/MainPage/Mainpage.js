@@ -1,25 +1,70 @@
 import classes from './Mainpage.module.css';
 import Button from '@mui/material/Button';
 import Logo from '../Logo/Logo';
+import Main from '../Main/Main';
+import Agency from '../Agency/Agency';
+import { Route, Routes } from "react-router-dom";
 import { HiOutlineArrowRight } from '@react-icons/all-files/hi/HiOutlineArrowRight';
 
-const Mainpage = ({ setIsOpen }) => {
+const Mainpage = ({ setIsOpen, isOpen }) => {
+
   return (
     <section className={classes.mainWrapper}>
       <Logo />
+      <article
+        className={classes.navigation}
+        style={!isOpen ? { zIndex: "3", } : { zIndex: "0" }}
+      >
+        <ul className={classes.navList}>
+          <li>
+            <a href='/main'>Main</a>
+          </li>
+          <li>
+            <a href='/agency'>
+              Agency
+            </a>
+          </li>
+          <li>
+            <a href='/portfolio'>
+              Portfolio
+            </a>
+          </li>
+          <li>
+            <a href='/blog'>
+              Blog
+            </a>
+          </li>
+        </ul>
+      </article>
+      <article
+        style={!isOpen ? { zIndex: "2", } : { zIndex: "0" }}
+        className={classes.mainContent}
+      >
+        <Routes>
+          <Route path="/main" element={<Main />} />
+          <Route path="/agency" element={<Agency />} />
+        </Routes>
+      </article>
       <article className={classes.joinUsWrapper}>
-        <h1 className={classes.joinUsTitle}>
-          Have <span>an idea?</span>
-        </h1>
         <div className={classes.buttonWrapper}>
-          <Button aria-label='submit' variant="contained" size='large' className={classes.button} onClick={() => setIsOpen(true)}>
+          <Button
+            aria-label='submit'
+            variant="contained"
+            size='large'
+            className={classes.button}
+            onClick={() => setIsOpen(true)}
+            style={!isOpen ? { zIndex: "2", } : { zIndex: "0" }}
+          >
             <h3>CONTACT US</h3>
             <HiOutlineArrowRight />
-          </Button> 
-          <h2>We will do the rest!</h2>
+          </Button>
+          <h2
+            style={!isOpen ? { zIndex: "2", } : { zIndex: "0" }}
+          >We will do the rest!
+          </h2>
         </div>
       </article>
-    </section>
+    </section >
   );
 }
 
