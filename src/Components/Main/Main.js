@@ -16,15 +16,15 @@ function Main() {
         keyboard={{
           enabled: true
         }}
-        // autoplay={{
-        //   delay: 2000,
-        //   disableOnInteraction: true
-        // }}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: true
+        }}
         pagination={{
           clickable: true
         }}
         navigation={true}
-        modules={[Keyboard, Pagination, Navigation]}
+        modules={[Keyboard, Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -48,6 +48,45 @@ function Main() {
               Define
               <span>the architecture</span>
               <span>& technology stack</span>
+            </h1>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='carousel-item carousel-item4'>
+            <h1 className='description'>
+              Team, costs
+              <span>& deadline</span>
+            </h1>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='carousel-item carousel-item5'>
+            <h1 className='description'>
+              Roadmap,
+              <span>tasks,</span>
+              <span>implementation, QA</span>
+            </h1>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='carousel-item carousel-item6'>
+            <h1 className='description'>
+              Reach the World,
+              <span>receive feedback</span>
+            </h1>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='carousel-item carousel-item7'>
+            <h1 className='description'>
+            React, improve,
+              <span>support</span>
+            </h1>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='carousel-item carousel-item8'>
+            <h1 className='description'>
             </h1>
           </div>
         </SwiperSlide>

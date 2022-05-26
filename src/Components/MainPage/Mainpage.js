@@ -17,7 +17,7 @@ const Mainpage = ({ setIsOpen, isOpen }) => {
       >
         <ul className={classes.navList}>
           <li>
-            <Link to='/main'>Main</Link>
+            <Link to='/'>Main</Link>
           </li>
           <li>
             <Link to='/agency'>
@@ -41,7 +41,7 @@ const Mainpage = ({ setIsOpen, isOpen }) => {
         className={classes.mainContent}
       >
         <Routes>
-          <Route path="/main" element={<Main />} />
+          <Route path="/" element={<Main />} />
           <Route path="/agency" element={<Agency />} />
         </Routes>
       </article>

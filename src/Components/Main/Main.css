@@ -6,7 +6,7 @@
 div {
   width: 100%;
   height: 100%;
-  background-position: 6em center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -29,10 +29,33 @@ div {
   background-image: url('./images/Group\ 117_3.png');
 }
 
+.carousel-item4 {
+  background-image: url('./images/Group\ 117_4.png');
+}
+
+.carousel-item5 {
+  background-image: url('./images/Group\ 117_5.png');
+}
+
+.carousel-item6 {
+  background-image: url('./images/Group\ 117_6.png');
+}
+
+.carousel-item7 {
+  background-image: url('./images/Group\ 117_7.png');
+}
+
+.carousel-item8 {
+  background-image: url('./images/Group\ 117_8.png');
+  background-size: 50%;
+}
+
+
+
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
   z-index: 30;
-  top: 94%;
+  top: 91%;
 }
 
 .swiper .swiper-button-prev::after,
@@ -42,12 +65,22 @@ div {
 }
 
 .swiper .swiper-button-next {
+  top: 3vw; 
   right: 5vw;
 }
 
 .swiper .swiper-button-prev {
   left: 60vw;
 }
+
+.swiper .swiper-button-prev::after {
+  color: #ffffff;
+}
+
+.swiper .swiper-button-prev::before {
+  color: #ffffff;
+}
+
 
 .carousel-item.description:first-child {
   line-height: 1vw;
@@ -72,11 +105,27 @@ div {
 }
 
 .swiper .swiper-pagination {
-  top: 54.5em;
-  left: 28vw !important;
+  top: 20.9vw !important;
+  left: 63vw !important;
+  display: flex;
+  align-items: center;
 }
 
 .swiper .swiper-pagination span {
   background-color: #ffffff;
   margin: 0vw 1vw !important;
+  text-align: center;
+}
+
+.swiper-pagination-bullet-active {
+  background-image: url(./images/Group\ 135.svg) !important;
+  background-color: transparent !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  width: 1.5vw !important;
+  height: 1.5vw !important;
+}
+
+.swiper .swiper-button-disabled {
+  display: none;
 }

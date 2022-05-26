@@ -57,7 +57,8 @@
   font-size: 1.2vw;
 }
 
-.navList li a:hover {
+.navList li a:hover,
+.isActive {
   color: rgba(248, 233, 255, 1);
 }
 
