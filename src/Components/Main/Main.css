@@ -50,12 +50,12 @@ div {
   background-size: 50%;
 }
 
-
-
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
   z-index: 30;
-  top: 91%;
+  bottom: 64px;
+  top: auto;
+  left: auto;
 }
 
 .swiper .swiper-button-prev::after,
@@ -65,12 +65,11 @@ div {
 }
 
 .swiper .swiper-button-next {
-  top: 3vw; 
   right: 5vw;
 }
 
 .swiper .swiper-button-prev {
-  left: 60vw;
+  right: 30vw;
 }
 
 .swiper .swiper-button-prev::after {
@@ -105,10 +104,13 @@ div {
 }
 
 .swiper .swiper-pagination {
-  top: 20.9vw !important;
-  left: 63vw !important;
+  bottom: 6.7vh !important;
+  right: 15vh !important;
+  width: auto !important;
+  height: 3em;
   display: flex;
   align-items: center;
+  left: auto !important;
 }
 
 .swiper .swiper-pagination span {

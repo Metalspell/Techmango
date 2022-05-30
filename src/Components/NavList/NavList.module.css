@@ -1,0 +1,45 @@
+.navList {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0vw 0vw 2vw 0vw;
+}
+
+.navList li a {
+  color: rgba(248, 233, 255, 0.5);
+  cursor: pointer;
+  margin: 0;
+  font-family: 'Inter';
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2vw;
+}
+
+.navList li a:hover,
+.isActive {
+  color: rgba(248, 233, 255, 1);
+}
+
+.navList li:hover {
+  color: rgba(248, 233, 255, 1);
+}
+
+@media screen and (max-width: 1024px) {
+  .navList {
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-around;
+    height: 100vh;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 12;
+  }
+
+  .navList li a {
+    font-weight: 500;
+    font-size: 6vw;
+  }
+}

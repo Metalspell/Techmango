@@ -1,0 +1,40 @@
+.mobileNavigation {
+  display: none;
+}
+
+.mobileNavigationActive {
+  display: none;
+}
+
+.hamburger-close {
+  grid-column-start: 12;
+  grid-column-end: 12;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .mobileNavigation {
+    display: flex;
+    align-items: center;
+    grid-column-start: 12;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 1;
+  }
+
+  .mobileNavigationActive {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(30px);
+    position: absolute;
+    z-index: 9;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+}

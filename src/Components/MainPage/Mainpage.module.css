@@ -19,16 +19,6 @@
   background-image: url('./images/Group\ 137.png'), url('./images/Group\ 47.png');
 }
 
-.navigation {
-  grid-column-start: 8;
-  grid-column-end: 12;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  display: flex;
-  align-items: center;
-  z-index: 2;
-}
-
 .mainContent {
   grid-column-start: 2;
   grid-column-end: 13;
@@ -36,34 +26,6 @@
   grid-row-end: 13;
   display: flex;
   z-index: 1;
-}
-
-.navList {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  list-style-type: none;
-  margin: 0vw 0vw 2vw 0vw;
-}
-
-.navList li a {
-  color: rgba(248, 233, 255, 0.5);
-  cursor: pointer;
-  margin: 0;
-  font-family: 'Inter';
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.2vw;
-}
-
-.navList li a:hover,
-.isActive {
-  color: rgba(248, 233, 255, 1);
-}
-
-.navList li:hover {
-  color: rgba(248, 233, 255, 1);
 }
 
 .logoWrapper {
@@ -169,8 +131,8 @@
   .logoWrapper {
     grid-column-start: 5;
     grid-column-end: 9;
-    grid-row-start: 2;
-    grid-row-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
 
   .logoTitle {

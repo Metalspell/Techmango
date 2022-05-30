@@ -3,7 +3,9 @@ import Button from '@mui/material/Button';
 import Logo from '../Logo/Logo';
 import Main from '../Main/Main';
 import Agency from '../Agency/Agency';
-import { Route, Routes, Link } from "react-router-dom";
+import NavLinks from '../NavLinks/NavLinks';
+import MobileNavLinks from '../MobileNavLinks/MobileNavLinks';
+import { Route, Routes } from "react-router-dom";
 import { HiOutlineArrowRight } from '@react-icons/all-files/hi/HiOutlineArrowRight';
 
 const Mainpage = ({ setIsOpen, isOpen }) => {
@@ -11,31 +13,8 @@ const Mainpage = ({ setIsOpen, isOpen }) => {
   return (
     <section className={classes.mainWrapper}>
       <Logo />
-      <article
-        className={classes.navigation}
-        style={!isOpen ? { zIndex: "3", } : { zIndex: "0" }}
-      >
-        <ul className={classes.navList}>
-          <li>
-            <Link to='/'>Main</Link>
-          </li>
-          <li>
-            <Link to='/agency'>
-              Agency
-            </Link>
-          </li>
-          <li>
-            <Link to='/portfolio'>
-              Portfolio
-            </Link>
-          </li>
-          <li>
-            <Link to='/blog'>
-              Blog
-            </Link>
-          </li>
-        </ul>
-      </article>
+      <NavLinks isOpen={isOpen}/>
+      <MobileNavLinks isOpen={isOpen} />
       <article
         style={!isOpen ? { zIndex: "2", } : { zIndex: "0" }}
         className={classes.mainContent}
