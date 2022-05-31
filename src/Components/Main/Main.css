@@ -3,57 +3,69 @@
   src: url('../../Fonts/Briem/BriemScriptStd-Bold.otf');
 }
 
-div {
+.carousel-item {
+  display: grid;
   width: 100%;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-.carousel-item {
   grid-template-rows: repeat(12, 1fr);
   grid-template-columns: repeat(12, 1fr);
-  display: grid;
 }
 
-.carousel-item1 {
+.carousel-background {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  z-index: 1;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 12;
+}
+
+.carousel-background1 {
   background-image: url('./images/Group\ 117_1.png');
 }
 
-.carousel-item2 {
+.carousel-background2 {
   background-image: url('./images/Group\ 117_2.png');
 }
 
-.carousel-item3 {
+.carousel-background3 {
   background-image: url('./images/Group\ 117_3.png');
 }
 
-.carousel-item4 {
+.carousel-background4 {
   background-image: url('./images/Group\ 117_4.png');
 }
 
-.carousel-item5 {
+.carousel-background5 {
   background-image: url('./images/Group\ 117_5.png');
 }
 
-.carousel-item6 {
+.carousel-background6 {
   background-image: url('./images/Group\ 117_6.png');
 }
 
-.carousel-item7 {
+.carousel-background7 {
   background-image: url('./images/Group\ 117_7.png');
 }
 
-.carousel-item8 {
+.carousel-background8 {
   background-image: url('./images/Group\ 117_8.png');
+  background-position: 45% center;
   background-size: 50%;
 }
 
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
   z-index: 30;
-  bottom: 64px;
+  bottom: 85px;
   top: auto;
   left: auto;
 }
@@ -72,15 +84,6 @@ div {
   right: 30vw;
 }
 
-.swiper .swiper-button-prev::after {
-  color: #ffffff;
-}
-
-.swiper .swiper-button-prev::before {
-  color: #ffffff;
-}
-
-
 .carousel-item.description:first-child {
   line-height: 1vw;
   font-size: 3.5vw;
@@ -89,7 +92,7 @@ div {
 .description {
   grid-column-start: 1;
   grid-column-end: 5;
-  grid-row-start: 9;
+  grid-row-start: 8;
   grid-row-end: 11;
 
   display: flex;
@@ -99,12 +102,13 @@ div {
   font-weight: 800;
   font-size: 2.5vw;
   color: #ffffff;
-  margin: 1vw 0vw 0vw 1vw;
+  margin: 0vw 1vw;
   line-height: 3vw;
+  z-index: 1;
 }
 
 .swiper .swiper-pagination {
-  bottom: 6.7vh !important;
+  bottom: 9vh !important;
   right: 15vh !important;
   width: auto !important;
   height: 3em;
@@ -120,14 +124,166 @@ div {
 }
 
 .swiper-pagination-bullet-active {
-  background-image: url(./images/Group\ 135.svg) !important;
-  background-color: transparent !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
   width: 1.5vw !important;
   height: 1.5vw !important;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: transparent !important;
+  animation: fill linear 4.1s;
+}
+
+@keyframes fill {
+  0% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+  }
+
+  12.5% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+  }
+
+  25% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 120.71% 50%, 120.71% 50%, 120.71% 50%, 120.71% 50%, 100% 0%);
+  }
+
+  37.5% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 0%);
+  }
+
+  50% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 50% 120.71%, 50% 120.71%, 50% 120.71%, 100% 100%, 100% 0%);
+  }
+
+  62.5% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 0% 100%, 0% 100%, 0% 100%, 100% 100%, 100% 0%);
+  }
+
+  75% {
+    clip-path: polygon(50% -20.71%, 50% 50%, -20.71% 50%, -20.71% 50%, 0% 100%, 100% 100%, 100% 0%);
+  }
+
+  87.5% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 0% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  }
+
+  100% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 50% -20.71%, 0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  }
 }
 
 .swiper .swiper-button-disabled {
   display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .description {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 10;
+    grid-row-end: 11;
+    justify-content: center;
+    font-size: 4.5vw;
+    margin: 0 auto;
+    line-height: 7vw;
+    display: inline-block;
+  }
+
+  .carousel-background {
+    background-size: 150vw;
+  }
+
+  .carousel-item .carousel-background1,
+  .carousel-item .carousel-background2,
+  .carousel-item .carousel-background3 {
+    background-position: 30% center;
+  }
+
+  .carousel-background {
+    grid-row-end: 13;
+    background-position: 50% center;
+  }
+
+  .carousel-background8 {
+    background-size: 70%;
+  }
+
+  .swiper .swiper-pagination {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    bottom: 4vh !important;
+    right: 0 !important;
+  }
+
+  .swiper .swiper-pagination span {
+    margin: 0vw 2vw !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 2.5vw !important;
+    height: 2.5vw !important;
+  }
+
+  .swiper .swiper-button-prev::after,
+  .swiper .swiper-button-next::after {
+    font-size: 1.5vw;
+  }
+
+  .swiper .swiper-button-prev,
+  .swiper .swiper-button-next {
+    bottom: 4vh;
+  }
+
+  .swiper .swiper-button-next {
+    right: 25vw;
+  }
+
+  .swiper .swiper-button-prev {
+    right: 72vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .description {
+    font-size: 5.5vw;
+    line-height: 6vw;
+    display: inherit;
+    text-align: center;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    margin-top: 10vh;
+  }
+
+  .carousel-item .carousel-background1,
+  .carousel-item .carousel-background2,
+  .carousel-item .carousel-background3 {
+    background-position: 35% 25%;
+  }
+
+  .carousel-background {
+    background-size: 260vw;
+    background-position: 50% 30%;
+  }
+
+  .carousel-background8 {
+    background-size: 70%;
+    background-position: inherit;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 3.5vw !important;
+    height: 3.5vw !important;
+  }
+
+  .swiper .swiper-button-prev::after,
+  .swiper .swiper-button-next::after {
+    font-size: 2.5vw;
+  }
+
+  .swiper .swiper-button-next {
+    right: 15vw;
+  }
+
+  .swiper .swiper-button-prev {
+    right: 77vw;
+  }
 }

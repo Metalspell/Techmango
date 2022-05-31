@@ -1,15 +1,15 @@
 import NavList from '../NavList/NavList';
 import './MobileNavLinks.css';
-import { AiOutlineMenu } from 'react-icons/ai';
-import { CgCloseO } from 'react-icons/cg';
 import { useState } from "react";
+import { RiMenu3Fill } from 'react-icons/ri';
+import { RiCloseLine } from 'react-icons/ri'
 
 const MobileNavLinks = ({ isOpen }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
-  const hamburgerIcon = <AiOutlineMenu className='hamburger-open' style={!isOpen ? { zIndex: "2", } : { zIndex: "0" }} size='3rem' color='#ffffff'
+  const hamburgerIcon = <RiMenu3Fill className='hamburger-open' style={!isOpen ? { zIndex: "2", } : { zIndex: "0" }} size='3rem' color='#ffffff'
     onClick={() => setOpenMenu(!openMenu)} />
-  const closeIcon = <CgCloseO className='hamburger-close' size='3rem' color='#ffffff'
+  const closeIcon = <RiCloseLine className='hamburger-close' size='3rem' color='#ffffff'
     onClick={() => setOpenMenu(!openMenu)} />
 
   return (

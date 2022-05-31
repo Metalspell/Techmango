@@ -12,8 +12,8 @@ const Mainpage = ({ setIsOpen, isOpen }) => {
 
   return (
     <section className={classes.mainWrapper}>
-      <Logo />
-      <NavLinks isOpen={isOpen}/>
+      <Logo isOpen={isOpen} />
+      <NavLinks isOpen={isOpen} />
       <MobileNavLinks isOpen={isOpen} />
       <article
         style={!isOpen ? { zIndex: "2", } : { zIndex: "0" }}

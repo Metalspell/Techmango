@@ -36,12 +36,6 @@
   display: flex;
 }
 
-@media screen and (max-height: 580px) {
-  .logoWrapper {
-    display: none;
-  }
-}
-
 .logo {
   background-image: url('./images/Group.png');
   background-repeat: no-repeat;
@@ -96,7 +90,7 @@
   background-image: linear-gradient(#F39200 0%, #E4032E 100%);
   width: 20vw;
   height: 4vw;
-  border-radius: 0.8vw !important;
+  border-radius: 50px !important;
   cursor: pointer;
 }
 
@@ -123,16 +117,23 @@
   font-family: 'Inter';
   font-weight: 400;
   font-size: 1.7vw;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 1);
   text-transform: uppercase;
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
+  .mainContent {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-end: 13;
+  }
+
   .logoWrapper {
     grid-column-start: 5;
     grid-column-end: 9;
     grid-row-start: 1;
     grid-row-end: 3;
+    margin-top: 5vw;
   }
 
   .logoTitle {
@@ -146,7 +147,7 @@
   }
 
   .joinUsWrapper {
-    grid-column-start: 4;
+    grid-column-start: 3;
     grid-column-end: 11;
     grid-row-start: 11;
     grid-row-end: 12;
@@ -167,12 +168,12 @@
   }
 
   .button {
-    height: 6vw;
-    width: 25vw;
+    height: 7vw;
+    width: 40vw;
   }
 
   .button h3 {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 
   .button svg {
@@ -182,10 +183,13 @@
 }
 
 @media (max-width: 480px) {
+  .mainContent {
+    grid-row-end: 13;
+  }
   .logoWrapper {
-    grid-column-start: 4;
+    grid-column-start: 2;
     grid-column-end: 10;
-    grid-row-start: 2;
+    grid-row-start: 1;
     grid-row-end: 3;
   }
 
@@ -202,6 +206,8 @@
   .joinUsWrapper {
     grid-column-start: 2;
     grid-column-end: 12;
+    grid-row-start: 12;
+    grid-row-end: 13;
   }
 
   .joinUsTitle {
@@ -218,7 +224,7 @@
   .button {
     height: 10vw;
     width: 50vw;
-    border-radius: 10px !important;
+    border-radius: 50px !important;
   }
 
   .button h3 {
@@ -233,5 +239,11 @@
   .buttonWrapper h2 {
     font-size: 4.5vw;
     margin: 6vw 0vw 0vw 0vw;
+  }
+}
+
+@media screen and (max-height: 580px) {
+  .logoWrapper {
+    display: none;
   }
 }

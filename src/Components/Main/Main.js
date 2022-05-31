@@ -7,7 +7,6 @@ import "swiper/css/navigation";
 import { Keyboard, Pagination, Navigation, Autoplay } from "swiper";
 
 function Main() {
-
   return (
     <>
       <Swiper
@@ -17,7 +16,7 @@ function Main() {
           enabled: true
         }}
         autoplay={{
-          delay: 2000,
+          delay: 4000,
           disableOnInteraction: true
         }}
         pagination={{
@@ -28,48 +27,60 @@ function Main() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className='carousel-item carousel-item1'>
+          <div className='carousel-item'>
+            <div className='carousel-background carousel-background1'>
+            </div>
             <h1 className='description'>
               Have <span>an idea?</span>
             </h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='carousel-item carousel-item2'>
+          <div className='carousel-item'>
+            <div className='carousel-background carousel-background2'>
+            </div>
             <h1 className='description'>
               Lets<span>formalize</span>
-              <span>& document it!</span>
+              <span> & document it!</span>
             </h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='carousel-item carousel-item3'>
+          <div className='carousel-item'>
+            <div className='carousel-background carousel-background3'>
+            </div>
             <h1 className='description'>
               Define
               <span>the architecture</span>
-              <span>& technology stack</span>
+              <span> & technology stack</span>
             </h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='carousel-item carousel-item4'>
+          <div className='carousel-item'>
+            <div className='carousel-background carousel-background4'>
+            </div>
             <h1 className='description'>
               Team, costs
-              <span>& deadline</span>
+              <span> & deadline</span>
             </h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='carousel-item carousel-item5'>
+          <div className='carousel-item'>
+            <div className='carousel-background carousel-background5'>
+            </div>
             <h1 className='description'>
               Roadmap,
-              <span>tasks,</span>
+              <span>tasks, </span>
               <span>implementation, QA</span>
             </h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='carousel-item carousel-item6'>
+          <div className='carousel-item'>
+            <div className='carousel-background carousel-background6'>
+            </div>
             <h1 className='description'>
               Reach the World,
               <span>receive feedback</span>
@@ -77,17 +88,19 @@ function Main() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='carousel-item carousel-item7'>
+          <div className='carousel-item'>
+            <div className='carousel-background carousel-background7'>
+            </div>
             <h1 className='description'>
-            React, improve,
+              React, improve,
               <span>support</span>
             </h1>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className='carousel-item carousel-item8'>
-            <h1 className='description'>
-            </h1>
+          <div className='carousel-item'>
+            <div className='carousel-background carousel-background8'>
+            </div>
           </div>
         </SwiperSlide>
       </Swiper>

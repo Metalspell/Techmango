@@ -23,6 +23,7 @@
     grid-row-start: 1;
     grid-row-end: 2;
     z-index: 1;
+    margin-top: 8vw;
   }
 
   .mobileNavigationActive {
@@ -36,5 +37,20 @@
     grid-template-rows: repeat(12, 1fr);
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobileNavigation {
+    grid-column-start: 11;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-top: 8vw;
+  }
+
+  .hamburger-open {
+    width: 8vw;
+    height: 8vw;
   }
 }
