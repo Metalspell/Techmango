@@ -4,26 +4,31 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Keyboard, Pagination, Navigation, Autoplay } from "swiper";
+import "swiper/css/effect-fade";
+import { Keyboard, Pagination, Navigation, Autoplay, EffectFade } from "swiper";
 
 function Main() {
   return (
     <>
       <Swiper
-        slidesPerView={1}
+        initialSlide={0}
+        effect={'fade'}
+        loop={true}
+        fadeEffect={{ crossFade: true }}
         spaceBetween={30}
         keyboard={{
           enabled: true
         }}
         autoplay={{
-          delay: 4000,
+          delay: 3500,
           disableOnInteraction: true
         }}
+        speed={0.500}
         pagination={{
           clickable: true
         }}
         navigation={true}
-        modules={[Keyboard, Pagination, Navigation, Autoplay]}
+        modules={[EffectFade, Keyboard, Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -72,8 +77,8 @@ function Main() {
             </div>
             <h1 className='description'>
               Roadmap,
-              <span>tasks, </span>
-              <span>implementation, QA</span>
+              <span> tasks, </span>
+              <span> implementation, QA</span>
             </h1>
           </div>
         </SwiperSlide>
@@ -83,7 +88,7 @@ function Main() {
             </div>
             <h1 className='description'>
               Reach the World,
-              <span>receive feedback</span>
+              <span> receive feedback</span>
             </h1>
           </div>
         </SwiperSlide>
@@ -93,7 +98,7 @@ function Main() {
             </div>
             <h1 className='description'>
               React, improve,
-              <span>support</span>
+              <span> support</span>
             </h1>
           </div>
         </SwiperSlide>

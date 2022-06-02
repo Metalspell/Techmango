@@ -25,14 +25,18 @@ const NavList = ({ setOpenMenu }) => {
         </li>
       </motion.li>
       <motion.li transition={{ delay: 0.20 }} initial={animateFrom} animate={animateTo}>
-        <li>
+        <li
+          onClick={() => setOpenMenu(false)}
+        >
           <Link to='/portfolio'>
             Portfolio
           </Link>
         </li>
       </motion.li>
       <motion.li transition={{ delay: 0.30 }} initial={animateFrom} animate={animateTo}>
-        <li>
+        <li
+          onClick={() => setOpenMenu(false)}
+        >
           <Link to='/blog'>
             Blog
           </Link>

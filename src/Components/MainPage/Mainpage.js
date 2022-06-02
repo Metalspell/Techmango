@@ -3,6 +3,8 @@ import Button from '@mui/material/Button';
 import Logo from '../Logo/Logo';
 import Main from '../Main/Main';
 import Agency from '../Agency/Agency';
+import Portfolio from '../Portfolio/Portfolio';
+import Blog from '../Blog/Blog';
 import NavLinks from '../NavLinks/NavLinks';
 import MobileNavLinks from '../MobileNavLinks/MobileNavLinks';
 import { Route, Routes } from "react-router-dom";
@@ -22,6 +24,8 @@ const Mainpage = ({ setIsOpen, isOpen }) => {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/agency" element={<Agency />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
       </article>
       <article className={classes.joinUsWrapper}>

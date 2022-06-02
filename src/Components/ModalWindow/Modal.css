@@ -249,6 +249,7 @@ input:focus {
 }
 
 @media screen and (max-height: 580px) {
+
   .form-field,
   .error-active {
     margin: 4vw 0vw 2vw 0vw !important;
@@ -296,6 +297,8 @@ input:focus {
   .modal-close-icon {
     width: 4vw;
     height: 4vw;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
 }
 

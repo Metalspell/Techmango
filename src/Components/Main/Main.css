@@ -62,6 +62,12 @@
   background-size: 50%;
 }
 
+.carousel-item .carousel-background1,
+.carousel-item .carousel-background2,
+.carousel-item .carousel-background3 {
+  background-position: 70% center;
+}
+
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
   z-index: 30;
@@ -129,7 +135,7 @@
   border: 2px solid #ffffff;
   border-radius: 50%;
   background: transparent !important;
-  animation: fill linear 4.1s;
+  animation: fill linear 4s;
 }
 
 @keyframes fill {
@@ -170,6 +176,14 @@
   }
 }
 
+.swiper-slide-active {
+  animation: slideAnim forwards 1s;
+}
+
+.swiper-wrapper{
+  transition-duration: 2ms !important;
+}
+
 .swiper .swiper-button-disabled {
   display: none;
 }
@@ -194,12 +208,12 @@
   .carousel-item .carousel-background1,
   .carousel-item .carousel-background2,
   .carousel-item .carousel-background3 {
-    background-position: 30% center;
+    background-position: 30% 30%;
   }
 
   .carousel-background {
     grid-row-end: 13;
-    background-position: 50% center;
+    background-position: 50% 40%;
   }
 
   .carousel-background8 {
@@ -250,7 +264,7 @@
     text-align: center;
     grid-row-start: 9;
     grid-row-end: 10;
-    margin-top: 10vh;
+    margin-top: 5vh;
   }
 
   .carousel-item .carousel-background1,
@@ -260,7 +274,7 @@
   }
 
   .carousel-background {
-    background-size: 260vw;
+    background-size: 130vh;
     background-position: 50% 30%;
   }
 
@@ -285,5 +299,12 @@
 
   .swiper .swiper-button-prev {
     right: 77vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .description {
+    margin-top: 0vh;
+    line-height: 4vh;
   }
 }
