@@ -1,17 +1,26 @@
 {
   "files": {
-    "main.css": "/Techmango/static/css/main.6e461f59.css",
-    "main.js": "/Techmango/static/js/main.f5bfe9bc.js",
-    "static/media/Group 117_cut.png": "/Techmango/static/media/Group 117_cut.71b139d2285de1227e4e.png",
+    "main.css": "/Techmango/static/css/main.2f2f246a.css",
+    "main.js": "/Techmango/static/js/main.076311ff.js",
+    "static/media/Group 137.png": "/Techmango/static/media/Group 137.a79d8d7b5bd08e08d926.png",
+    "static/media/Group 117_6.png": "/Techmango/static/media/Group 117_6.4d0fd5e34cc5751907a1.png",
+    "static/media/Group 117_4.png": "/Techmango/static/media/Group 117_4.5705e54b028b9adcd429.png",
+    "static/media/Group 117_7.png": "/Techmango/static/media/Group 117_7.687b642ae49d30243919.png",
+    "static/media/Group 117_5.png": "/Techmango/static/media/Group 117_5.ef3808fa273df6a5e3f5.png",
+    "static/media/Group 117_3.png": "/Techmango/static/media/Group 117_3.5255912072aad0fe7a85.png",
     "static/media/Inter-VariableFont_slnt,wght.ttf": "/Techmango/static/media/Inter-VariableFont_slnt,wght.b4c30855aff392d7e8dc.ttf",
+    "static/media/Group 117_1.png": "/Techmango/static/media/Group 117_1.288627bb90608b3473a1.png",
+    "static/media/Group 117_2.png": "/Techmango/static/media/Group 117_2.5360dcad4fce7a008618.png",
     "static/media/BriemScriptStd-Bold.otf": "/Techmango/static/media/BriemScriptStd-Bold.9a6a5ed26962c3da506d.otf",
+    "static/media/Group 117_8.png": "/Techmango/static/media/Group 117_8.b6145f7b888e271a38b8.png",
+    "static/media/Group 47.png": "/Techmango/static/media/Group 47.179adadd81f35dc7e221.png",
     "static/media/Group.png": "/Techmango/static/media/Group.00183cea6269137d68f2.png",
     "index.html": "/Techmango/index.html",
-    "main.6e461f59.css.map": "/Techmango/static/css/main.6e461f59.css.map",
-    "main.f5bfe9bc.js.map": "/Techmango/static/js/main.f5bfe9bc.js.map"
+    "main.2f2f246a.css.map": "/Techmango/static/css/main.2f2f246a.css.map",
+    "main.076311ff.js.map": "/Techmango/static/js/main.076311ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e461f59.css",
-    "static/js/main.f5bfe9bc.js"
+    "static/css/main.2f2f246a.css",
+    "static/js/main.076311ff.js"
   ]
 }
