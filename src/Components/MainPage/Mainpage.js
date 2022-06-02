@@ -7,7 +7,7 @@ import Portfolio from '../Portfolio/Portfolio';
 import Blog from '../Blog/Blog';
 import NavLinks from '../NavLinks/NavLinks';
 import MobileNavLinks from '../MobileNavLinks/MobileNavLinks';
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Redirect } from "react-router-dom";
 import { HiOutlineArrowRight } from '@react-icons/all-files/hi/HiOutlineArrowRight';
 
 const Mainpage = ({ setIsOpen, isOpen }) => {
@@ -22,10 +22,14 @@ const Mainpage = ({ setIsOpen, isOpen }) => {
         className={classes.mainContent}
       >
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/main" element={<Main />} />
           <Route path="/agency" element={<Agency />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/blog" element={<Blog />} />
+          <Route
+            path="*"
+            element={<Main to="/main" replace />}
+          />
         </Routes>
       </article>
       <article className={classes.joinUsWrapper}>

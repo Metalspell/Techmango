@@ -12,7 +12,7 @@ const NavList = ({ setOpenMenu }) => {
         <li
           onClick={() => setOpenMenu(false)}
         >
-          <Link to='/'>Main</Link>
+          <Link to='/main'>Main</Link>
         </li>
       </motion.li>
       <motion.li transition={{ delay: 0.10 }} initial={animateFrom} animate={animateTo}>
