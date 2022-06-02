@@ -7,7 +7,7 @@ import Portfolio from '../Portfolio/Portfolio';
 import Blog from '../Blog/Blog';
 import NavLinks from '../NavLinks/NavLinks';
 import MobileNavLinks from '../MobileNavLinks/MobileNavLinks';
-import { Route, Routes, Redirect } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { HiOutlineArrowRight } from '@react-icons/all-files/hi/HiOutlineArrowRight';
 
 const Mainpage = ({ setIsOpen, isOpen }) => {
