@@ -1,5 +1,6 @@
 import './Main.css';
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect } from 'react';
 import "react-image-gallery/styles/css/image-gallery.css";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -7,7 +8,13 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import { Keyboard, Pagination, Navigation, Autoplay, EffectFade } from "swiper";
 
-function Main() {
+const Main = () => {
+
+  useEffect(() => {
+    const a = document.getElementsByClassName('.swiper-pagination');
+    console.log(a);
+  }, []);
+
   return (
     <>
       <Swiper

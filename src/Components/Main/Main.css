@@ -21,6 +21,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 90%;
+  background-position: 10% center;
   z-index: 1;
   grid-column-start: 1;
   grid-column-end: 13;
@@ -65,7 +66,7 @@
 .carousel-item .carousel-background1,
 .carousel-item .carousel-background2,
 .carousel-item .carousel-background3 {
-  background-position: 70% center;
+  background-position: 20% center;
 }
 
 .swiper .swiper-button-prev,
