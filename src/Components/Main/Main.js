@@ -10,11 +10,6 @@ import { Keyboard, Pagination, Navigation, Autoplay, EffectFade } from "swiper";
 
 const Main = () => {
 
-  useEffect(() => {
-    const a = document.getElementsByClassName('.swiper-pagination');
-    console.log(a);
-  }, []);
-
   return (
     <>
       <Swiper
@@ -27,10 +22,9 @@ const Main = () => {
           enabled: true
         }}
         autoplay={{
-          delay: 3500,
+          delay: 4000,
           disableOnInteraction: true
         }}
-        speed={0.500}
         pagination={{
           clickable: true
         }}

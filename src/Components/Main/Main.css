@@ -21,7 +21,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 90%;
-  background-position: center;
+  background-position: -5% center;
   z-index: 1;
   grid-column-start: 1;
   grid-column-end: 13;
@@ -137,6 +137,19 @@
   border-radius: 50%;
   background: transparent !important;
   animation: fill linear 4s;
+  position: relative;
+}
+
+.swiper-pagination-bullet-active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./images/Ellipse\ 48.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @keyframes fill {

@@ -87,7 +87,7 @@
 }
 
 .button {
-  background-image: linear-gradient(#F39200 0%, #E4032E 100%);
+  background-image: linear-gradient(227.77deg, #F39200 8.76%, #E4032E 79.32%);
   width: 20vw;
   height: 4vw;
   border-radius: 50px !important;
@@ -186,6 +186,7 @@
   .mainContent {
     grid-row-end: 13;
   }
+
   .logoWrapper {
     grid-column-start: 2;
     grid-column-end: 10;
