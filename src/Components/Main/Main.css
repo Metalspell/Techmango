@@ -69,12 +69,23 @@
   background-position: 20% center;
 }
 
+.swiper {
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  display: grid;
+}
+
+.swiper-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 13;
+}
+
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
-  z-index: 30;
-  bottom: 85px;
-  top: auto;
-  left: auto;
+  width: 100%;
+  display: flex;
 }
 
 .swiper .swiper-button-prev::after,
@@ -84,11 +95,23 @@
 }
 
 .swiper .swiper-button-next {
-  right: 5vw;
+  grid-column-start: 12;
+  grid-column-end: 12;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  justify-content: flex-start;
 }
 
 .swiper .swiper-button-prev {
-  right: 30vw;
+  grid-column-start: 8;
+  grid-column-end: 9;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  justify-content: flex-end;
+}
+
+.swiper .swiper-button-prev::after {
+  margin-right: 2vw;
 }
 
 .carousel-item.description:first-child {
@@ -115,13 +138,16 @@
 }
 
 .swiper .swiper-pagination {
-  bottom: 9vh !important;
-  right: 15vh !important;
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 11;
+  grid-row-end: 12;
   width: auto !important;
-  height: 3em;
   display: flex;
   align-items: center;
-  left: auto !important;
+  bottom: 0px !important;
+  margin-top: 2vw;
+  height: 100%;
 }
 
 .swiper .swiper-pagination span {
@@ -194,7 +220,7 @@
   animation: slideAnim forwards 1s;
 }
 
-.swiper-wrapper{
+.swiper-wrapper {
   transition-duration: 2ms !important;
 }
 
@@ -235,11 +261,12 @@
   }
 
   .swiper .swiper-pagination {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 12  ;
+    grid-row-end: 12;
     width: 100% !important;
-    display: flex;
     justify-content: center;
-    bottom: 4vh !important;
-    right: 0 !important;
   }
 
   .swiper .swiper-pagination span {
@@ -256,17 +283,22 @@
     font-size: 1.5vw;
   }
 
-  .swiper .swiper-button-prev,
   .swiper .swiper-button-next {
-    bottom: 4vh;
-  }
-
-  .swiper .swiper-button-next {
-    right: 25vw;
+    grid-column-start: 10;
+    grid-column-end: 11;
+    grid-row-start: 12;
+    grid-row-end: 12;
   }
 
   .swiper .swiper-button-prev {
-    right: 72vw;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 12;
+    grid-row-end: 12;
+  }
+
+  .swiper .swiper-button-prev::after {
+    margin-right: 0vw;
   }
 }
 
@@ -308,11 +340,17 @@
   }
 
   .swiper .swiper-button-next {
-    right: 15vw;
+    grid-column-start: 11;
+    grid-column-end: 12;
   }
 
   .swiper .swiper-button-prev {
-    right: 77vw;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .swiper .swiper-button-prev::after {
+    margin-right: 0vw;
   }
 }
 
