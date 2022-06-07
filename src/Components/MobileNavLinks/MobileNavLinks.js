@@ -15,7 +15,9 @@ const MobileNavLinks = ({ isOpen }) => {
   return (
     <nav style={!isOpen ? { zIndex: "3", } : { zIndex: "0" }} className={!openMenu ? `mobileNavigation` : `mobileNavigationActive`}>
       {openMenu ? closeIcon : hamburgerIcon}
-      {openMenu && <NavList setOpenMenu={setOpenMenu} />}
+      {openMenu &&
+        <NavList setOpenMenu={setOpenMenu} openMenu={openMenu} />
+      }
     </nav>
   );
 }
