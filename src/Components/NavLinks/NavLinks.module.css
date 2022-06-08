@@ -1,0 +1,15 @@
+.navigation {
+  grid-column-start: 8;
+  grid-column-end: 12;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1024px) {
+  .navigation {
+    display: none;
+  }
+}

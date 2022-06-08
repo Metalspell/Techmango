@@ -1,0 +1,366 @@
+@font-face {
+  font-family: 'Briem Bold';
+  src: url('../../Fonts/Briem/BriemScriptStd-Bold.otf');
+}
+
+.carousel-item {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.carousel-background {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: -5% center;
+  z-index: 1;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 12;
+}
+
+.carousel-background1 {
+  background-image: url('./images/Group\ 117_1.png');
+}
+
+.carousel-background2 {
+  background-image: url('./images/Group\ 117_2.png');
+}
+
+.carousel-background3 {
+  background-image: url('./images/Group\ 117_3.png');
+}
+
+.carousel-background4 {
+  background-image: url('./images/Group\ 117_4.png');
+}
+
+.carousel-background5 {
+  background-image: url('./images/Group\ 117_5.png');
+}
+
+.carousel-background6 {
+  background-image: url('./images/Group\ 117_6.png');
+}
+
+.carousel-background7 {
+  background-image: url('./images/Group\ 117_7.png');
+}
+
+.carousel-background8 {
+  background-image: url('./images/Group\ 117_8.png');
+  background-position: 45% center;
+  background-size: 50%;
+}
+
+.carousel-item .carousel-background1,
+.carousel-item .carousel-background2,
+.carousel-item .carousel-background3 {
+  background-position: 20% center;
+}
+
+.swiper {
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  display: grid;
+}
+
+.swiper-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 13;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  width: 100%;
+  display: flex;
+}
+
+.swiper .swiper-button-prev::after,
+.swiper .swiper-button-next::after {
+  color: #ffffff;
+  font-size: 1vw;
+}
+
+.swiper .swiper-button-next {
+  grid-column-start: 12;
+  grid-column-end: 12;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  justify-content: flex-start;
+}
+
+.swiper .swiper-button-prev {
+  grid-column-start: 8;
+  grid-column-end: 9;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  justify-content: flex-end;
+}
+
+.swiper .swiper-button-prev::after {
+  margin-right: 4vh;
+}
+
+.swiper .swiper-button-next::after {
+  margin-left: 1vh;
+}
+
+.carousel-item.description:first-child {
+  line-height: 1vw;
+  font-size: 3.5vw;
+}
+
+.description {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 8;
+  grid-row-end: 11;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Briem Bold';
+  font-weight: 800;
+  font-size: 2.5vw;
+  color: #ffffff;
+  margin: 0vw 1vw;
+  line-height: 3vw;
+  z-index: 1;
+}
+
+.swiper .swiper-pagination {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 11;
+  grid-row-end: 12;
+  width: auto !important;
+  display: flex;
+  align-items: center;
+  bottom: 0px !important;
+  margin-top: 2vw;
+  height: 100%;
+}
+
+.swiper .swiper-pagination span {
+  background-color: #ffffff;
+  margin: 0vw 1vw !important;
+  text-align: center;
+}
+
+.swiper-pagination-bullet-active {
+  width: 1.5vw !important;
+  height: 1.5vw !important;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: transparent !important;
+  animation: fill linear 4s;
+  position: relative;
+}
+
+.swiper-pagination-bullet-active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./images/Ellipse\ 48.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@keyframes fill {
+  0% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+  }
+
+  12.5% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);
+  }
+
+  25% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 120.71% 50%, 120.71% 50%, 120.71% 50%, 120.71% 50%, 100% 0%);
+  }
+
+  37.5% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 0%);
+  }
+
+  50% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 50% 120.71%, 50% 120.71%, 50% 120.71%, 100% 100%, 100% 0%);
+  }
+
+  62.5% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 0% 100%, 0% 100%, 0% 100%, 100% 100%, 100% 0%);
+  }
+
+  75% {
+    clip-path: polygon(50% -20.71%, 50% 50%, -20.71% 50%, -20.71% 50%, 0% 100%, 100% 100%, 100% 0%);
+  }
+
+  87.5% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 0% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  }
+
+  100% {
+    clip-path: polygon(50% -20.71%, 50% 50%, 50% -20.71%, 0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  }
+}
+
+.swiper-slide-active {
+  animation: slideAnim forwards 1s;
+}
+
+.swiper-wrapper {
+  transition-duration: 2ms !important;
+}
+
+.swiper .swiper-button-disabled {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .description {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 10;
+    grid-row-end: 11;
+    justify-content: center;
+    font-size: 4.5vw;
+    margin: 0 auto;
+    line-height: 7vw;
+    display: inline-block;
+  }
+
+  .carousel-background {
+    background-size: 150vw;
+  }
+
+  .carousel-item .carousel-background1,
+  .carousel-item .carousel-background2,
+  .carousel-item .carousel-background3 {
+    background-position: 30% 30%;
+  }
+
+  .carousel-background {
+    grid-row-end: 13;
+    background-position: 50% 40%;
+  }
+
+  .carousel-background8 {
+    background-size: 70%;
+  }
+
+  .swiper .swiper-pagination {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 12  ;
+    grid-row-end: 12;
+    width: 100% !important;
+    justify-content: center;
+  }
+
+  .swiper .swiper-pagination span {
+    margin: 0vw 2vw !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 2.5vw !important;
+    height: 2.5vw !important;
+  }
+
+  .swiper .swiper-button-prev::after,
+  .swiper .swiper-button-next::after {
+    font-size: 1.5vw;
+  }
+
+  .swiper .swiper-button-next {
+    grid-column-start: 10;
+    grid-column-end: 11;
+    grid-row-start: 12;
+    grid-row-end: 12;
+  }
+
+  .swiper .swiper-button-prev {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 12;
+    grid-row-end: 12;
+  }
+
+  .swiper .swiper-button-prev::after {
+    margin-right: 0vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .description {
+    font-size: 5.5vw;
+    line-height: 6vw;
+    display: inherit;
+    text-align: center;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    margin-top: 5vh;
+  }
+
+  .carousel-item .carousel-background1,
+  .carousel-item .carousel-background2,
+  .carousel-item .carousel-background3 {
+    background-position: 35% 25%;
+  }
+
+  .carousel-background {
+    background-size: 130vh;
+    background-position: 50% 30%;
+  }
+
+  .carousel-background8 {
+    background-size: 70%;
+    background-position: inherit;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 3.5vw !important;
+    height: 3.5vw !important;
+  }
+
+  .swiper .swiper-button-prev::after,
+  .swiper .swiper-button-next::after {
+    font-size: 2.5vw;
+  }
+
+  .swiper .swiper-button-next {
+    grid-column-start: 11;
+    grid-column-end: 12;
+  }
+
+  .swiper .swiper-button-prev {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .swiper .swiper-button-prev::after {
+    margin-right: 0vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .description {
+    margin-top: 0vh;
+    line-height: 4vh;
+  }
+}

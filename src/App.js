@@ -4,6 +4,7 @@ import ModalWindow from './Components/ModalWindow/ModalWindow';
 import { useState, useEffect } from "react";
 import Modal from "react-modal";
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { BrowserRouter as Router } from "react-router-dom";
 
 const queryClient = new QueryClient()
 
@@ -16,7 +17,9 @@ function App() {
 
   return (
     <section className='main-wrapper'>
-      <Mainpage setIsOpen={setIsOpen} />
+      <Router>
+        <Mainpage isOpen={isOpen} setIsOpen={setIsOpen} />
+      </Router>
       <QueryClientProvider client={queryClient}>
         <Modal
           ariaHideApp={false}

@@ -1,8 +1,8 @@
 import classes from '../MainPage/Mainpage.module.css';
 
-const Logo = () => {
+const Logo = ({isOpen}) => {
   return (
-    <article className={classes.logoWrapper}>
+    <article style={!isOpen ? { zIndex: "3", } : { zIndex: "0" }} className={classes.logoWrapper}>
       <div className={classes.logo}></div>
       <div className={classes.logoTitle}></div>
     </article>
