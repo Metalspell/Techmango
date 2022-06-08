@@ -7,8 +7,8 @@
 }
 
 .hamburger-close {
-  grid-column-start: 7;
-  grid-column-end: 7;
+  grid-column-start: 6;
+  grid-column-end: 8;
   grid-row-start: 1;
   grid-row-end: 2;
   z-index: 1;
@@ -37,6 +37,7 @@
     grid-template-rows: repeat(12, 1fr);
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
+    justify-items: center;
   }
 }
 
