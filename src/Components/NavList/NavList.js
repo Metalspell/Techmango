@@ -8,6 +8,12 @@ const NavList = ({ setOpenMenu, openMenu }) => {
   const animateFrom = { opcaity: 0, y: -40 }
   const animateTo = { opcaity: 1, y: 0 }
 
+  const handler = () => {
+    if (openMenu) {
+      setOpenMenu(false);
+    }
+  }
+
   return (
     <>
       {openMenu &&
@@ -18,42 +24,42 @@ const NavList = ({ setOpenMenu, openMenu }) => {
       {openMenu &&
         <div className={classes.horizontalDivider1}></div>
       }
-      <ul className={classes.navList}>
+      <div className={classes.navList}>
         <motion.li transition={{ delay: 0.05 }} initial={animateFrom} animate={animateTo}>
-          <li
-            onClick={() => setOpenMenu(false)}
+          <div
+            onClick={handler}
           >
             <Link to='/main'>Main</Link>
-          </li>
+          </div>
         </motion.li>
         <motion.li transition={{ delay: 0.10 }} initial={animateFrom} animate={animateTo}>
-          <li
-            onClick={() => setOpenMenu(false)}
+          <div
+            onClick={handler}
           >
             <Link to='/agency'>
               Agency
             </Link>
-          </li>
+          </div>
         </motion.li>
         <motion.li transition={{ delay: 0.20 }} initial={animateFrom} animate={animateTo}>
-          <li
-            onClick={() => setOpenMenu(false)}
+          <div
+            onClick={handler}
           >
             <Link to='/portfolio'>
               Portfolio
             </Link>
-          </li>
+          </div>
         </motion.li>
         <motion.li transition={{ delay: 0.30 }} initial={animateFrom} animate={animateTo}>
-          <li
-            onClick={() => setOpenMenu(false)}
+          <div
+            onClick={handler}
           >
             <Link to='/blog'>
               Blog
             </Link>
-          </li>
+          </div>
         </motion.li>
-      </ul >
+      </div >
       {openMenu &&
         <div className={classes.horizontalDivider2}></div>
       }
